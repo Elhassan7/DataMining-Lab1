@@ -42,4 +42,3 @@ with open(r'web Scraping\urls.txt','r') as urllist, open('output.json','w') as o
         if data:
             json.dump(data,outfile)
             outfile.write("\n")
-            # sleep(5)
