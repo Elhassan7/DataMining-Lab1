@@ -36,8 +36,9 @@ def scrape(url):
     return e.extract(r.text)
 
 # product_data = []
-with open(r'web Scraping\urls_prod.txt','r') as urllist, open('output.json','w') as outfile:
+with open(r'D:\INPT2\Data mining\DataMining-Project\web Scraping\urls_prod.txt','r') as urllist, open('D:\INPT2\Data mining\DataMining-Project\web Scraping\output.json','w') as outfile:
     for url in urllist.read().splitlines():
+        print(url)
         data = scrape(url) 
         if data:
             json.dump(data,outfile)
