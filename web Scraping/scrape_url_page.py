@@ -29,8 +29,8 @@ def scrape_url_page(url):
     print(len(html_soup))
 
 
-url_pages=open_file(r'D:\INPT2\Data mining\DataMining-Project\web Scraping\url_pages.txt','r')
-def in_urls(url):    
+def in_urls(url):   
+    url_pages=open_file(r'D:\INPT2\Data mining\DataMining-Project\web Scraping\url_pages.txt','r') 
     for urls in url_pages:
         urls=urls[:-1]
         if(url == urls ):
@@ -38,9 +38,12 @@ def in_urls(url):
     return False
 
 
-for i in range(1):
+for i in range(10):
+    url_pages=open_file(r'D:\INPT2\Data mining\DataMining-Project\web Scraping\url_pages.txt','r')
     for url in url_pages:
-        url=url[:-1]
+        #url= url[:-1]
+        print(url)
         scrape_url_page(url)
+
 
 print("Fin of scraping urls of web ages !")
