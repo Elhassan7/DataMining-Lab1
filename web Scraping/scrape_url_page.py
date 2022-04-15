@@ -37,13 +37,14 @@ def in_urls(url):
             return True
     return False
 
-
+j=0
 for i in range(10):
     url_pages=open_file(r'D:\INPT2\Data mining\DataMining-Project\web Scraping\url_pages.txt','r')
     for url in url_pages:
         #url= url[:-1]
-        print(url)
+        #print(url)
         scrape_url_page(url)
+        j+=1
 
 
-print("Fin of scraping urls of web ages !")
+print("Fin of scraping {} urls of web ages !".format(j))

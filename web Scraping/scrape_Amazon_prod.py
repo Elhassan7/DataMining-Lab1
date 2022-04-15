@@ -36,10 +36,15 @@ def scrape(url):
     return e.extract(r.text)
 
 # product_data = []
+j=0
 with open(r'D:\INPT2\Data mining\DataMining-Project\web Scraping\urls_prod.txt','r') as urllist, open('D:\INPT2\Data mining\DataMining-Project\web Scraping\output.json','w') as outfile:
     for url in urllist.read().splitlines():
-        print(url)
+        #print(url)
         data = scrape(url) 
         if data:
             json.dump(data,outfile)
             outfile.write("\n")
+            j+=1
+        
+
+print("Fin of scraping {} products at Amazon !".format(j))
