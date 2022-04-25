@@ -23,9 +23,8 @@ def scrape_url_prod(url):
     with open(r"D:\INPT2\Data mining\DataMining-Project\web Scraping\urls_prod.txt", "a") as urls_prod:
         for i in html_soup.find_all("a",class_="a-link-normal s-no-outline", href=True):
             url_prod="\n"+"https://www.amazon.com"+i["href"]
-            #print(url_prod)
+            print(url_prod)
             urls_prod.write(url_prod)
-
 
 
 
@@ -35,7 +34,7 @@ def scrape_url_prod(url):
 
 
 for i in range(2,400):
-    url="https://www.amazon.com/s?i=appliances&page={}".format(i)
+    url="https://www.amazon.com/s?i=Appliances&page={}".format(str(i))
     scrape_url_prod(url)
 
 print("L'operation successfuly excuted !")

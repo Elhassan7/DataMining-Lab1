@@ -9,10 +9,7 @@ images:
     type: Attribute
     attribute: data-a-dynamic-image
 
-rating:
-    css: '#acrPopover span' 
-    type: Attribute
-    attribute: title
+
 
 number_of_reviews:
     css: 'div.averageStarRatingNumerical span.a-size-base'
