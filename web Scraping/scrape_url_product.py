@@ -26,8 +26,16 @@ def scrape_url_prod(url):
             #print(url_prod)
             urls_prod.write(url_prod)
 
-with open(r"D:\INPT2\Data mining\DataMining-Project\web Scraping\url_pages.txt", "r") as url_pages:
-    for url in url_pages:
-        scrape_url_prod(url)
+
+
+
+#with open(r"D:\INPT2\Data mining\DataMining-Project\web Scraping\url_pages.txt", "r") as url_pages:
+#   for url in url_pages:
+#        scrape_url_prod(url)
+
+
+for i in range(2,400):
+    url="https://www.amazon.com/s?i=appliances&page={}".format(i)
+    scrape_url_prod(url)
 
 print("L'operation successfuly excuted !")
