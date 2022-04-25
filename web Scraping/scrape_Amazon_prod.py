@@ -5,7 +5,7 @@ from time import sleep
 
 
 # Create an Extractor by reading from the YAML file
-e = Extractor.from_yaml_file(r'web Scraping\selectors.yml')
+e = Extractor.from_yaml_file(r'D:\INPT2\Data mining\DataMining-Project\web Scraping\selectors.yml')
 
 def scrape(url):  
 

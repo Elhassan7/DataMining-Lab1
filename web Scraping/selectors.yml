@@ -2,18 +2,21 @@ name:
     css: '#productTitle'
     type: Text
 price:
-    css: '.a-offscreen'
+    css: '.apexPriceToPay .a-offscreen'
     type: Text
-short_description:
-    css: '#featurebullets_feature_div'
-    type: Text
+images:
+    css: '.imgTagWrapper img'
+    type: Attribute
+    attribute: data-a-dynamic-image
 
 rating:
-    css: 'div.a-fixed-left-grid-inner span.a-size-medium' 
-    type: Text
+    css: '#acrPopover span' 
+    type: Attribute
+    attribute: title
+
 number_of_reviews:
     css: 'div.averageStarRatingNumerical span.a-size-base'
     type: Text
 product_description:
-    css: '#productDescription'
+    css: '#productDescription span'
     type: Text
