@@ -5,7 +5,7 @@ from time import sleep
 
 
 # Create an Extractor by reading from the YAML file
-e = Extractor.from_yaml_file(r'D:\INPT2\Data mining\DataMining-Project\web Scraping\selectors.yml')
+e = Extractor.from_yaml_file('D:\INPT2\Data mining\DataMining-Project\web Scraping\selectors.yml')
 
 def scrape(url):  
 
@@ -18,7 +18,7 @@ def scrape(url):
         'sec-fetch-mode': 'navigate',
         'sec-fetch-user': '?1',
         'sec-fetch-dest': 'document',
-        'referer': 'https://www.amazon.com/',
+        'referer': 'https://www.amazon.com/, http://www.amazon.com/',
         'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
     }
 
@@ -37,7 +37,7 @@ def scrape(url):
 
 # product_data = []
 j=0
-with open(r'D:\INPT2\Data mining\DataMining-Project\web Scraping\urls_prod.txt','r') as urllist, open('D:\INPT2\Data mining\DataMining-Project\web Scraping\output.json','w') as outfile:
+with open(r'D:\INPT2\Data mining\DataMining-Project\web Scraping\urls_prod.txt','r') as urllist, open('D:\INPT2\Data mining\DataMining-Project\web Scraping\output_1.json','a') as outfile:
     for url in urllist.read().splitlines():
         #print(url)
         data = scrape(url) 

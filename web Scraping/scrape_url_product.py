@@ -34,7 +34,7 @@ def scrape_url_prod(url):
 
 
 for i in range(2,400):
-    url="https://www.amazon.com/s?i=Appliances&page={}".format(str(i))
+    url="https://www.amazon.com/s?i=software&page={}".format(str(i))
     scrape_url_prod(url)
 
 print("L'operation successfuly excuted !")

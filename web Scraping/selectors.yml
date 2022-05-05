@@ -8,12 +8,14 @@ images:
     css: '.imgTagWrapper img'
     type: Attribute
     attribute: data-a-dynamic-image
+rating:
+    css: 'div.a-fixed-left-grid-inner span.a-size-medium' 
+    type: Text
 
-
+product_description:
+    css: '#wayfinding-breadcrumbs_feature_div'
+    type: Text
 
 number_of_reviews:
     css: 'div.averageStarRatingNumerical span.a-size-base'
-    type: Text
-product_description:
-    css: '#productDescription span'
     type: Text
